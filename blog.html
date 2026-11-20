@@ -4,19 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Thulani Dawin Seleke's reflections on learning, personal development and teamwork.">
-  <title>Learning Blog | Thulani Dawin Seleke</title>
+  <meta name="description" content="Reflections on data analytics, business intelligence, practical learning and personal development by Thulani Dawin Seleke.">
+  <title>Journal | Thulani Dawin Seleke</title>
 
   <style>
-    * {
-      box-sizing: border-box;
+    :root {
+      --paper: #f5f4ef;
+      --ink: #20221f;
+      --green: #40594b;
+      --muted: #74766f;
+      --line: #deded5;
+      --white: #ffffff;
+      --soft-green: #e8ebe4;
     }
 
-    :root {
-      --ink: #171717;
-      --muted: #707070;
-      --line: #e5e5e5;
-      --surface: #fafafa;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     html {
@@ -24,352 +29,615 @@
     }
 
     body {
-      margin: 0;
-      background: #fff;
+      background: var(--paper);
       color: var(--ink);
       font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
       line-height: 1.8;
     }
 
     a {
       color: inherit;
-      text-underline-offset: 4px;
+      text-decoration: none;
     }
 
-    .topline {
-      height: 3px;
-      background: var(--ink);
+    .container {
+      width: min(1100px, 88%);
+      margin: 0 auto;
     }
 
     header {
       border-bottom: 1px solid var(--line);
     }
 
-    .nav {
-      max-width: 1050px;
-      margin: auto;
-      padding: 22px 25px;
+    .navigation {
+      min-height: 86px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 20px;
+      justify-content: space-between;
+      gap: 28px;
     }
 
     .brand {
-      font-size: 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 19px;
       font-weight: bold;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      white-space: nowrap;
     }
 
-    .nav a {
-      text-decoration: none;
-      font-size: 14px;
+    .brand span {
+      color: var(--green);
     }
 
-    .nav a:hover {
-      text-decoration: underline;
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 23px;
+    }
+
+    nav a {
+      color: var(--muted);
+      font-size: 12px;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover,
+    nav a[aria-current="page"] {
+      color: var(--green);
+    }
+
+    nav a[aria-current="page"] {
+      font-weight: bold;
     }
 
     .hero {
-      max-width: 900px;
-      margin: auto;
-      padding: 80px 25px 65px;
+      padding: 95px 0 75px;
+      border-bottom: 1px solid var(--line);
     }
 
     .eyebrow {
-      font-size: 12px;
+      color: var(--green);
+      font-size: 11px;
       font-weight: bold;
-      letter-spacing: 2px;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: var(--muted);
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: normal;
+      line-height: 1.2;
     }
 
     h1 {
-      font-size: clamp(42px, 7vw, 72px);
-      line-height: 1.05;
-      letter-spacing: -3px;
+      max-width: 850px;
       margin: 20px 0;
+      font-size: clamp(43px, 7vw, 78px);
+      letter-spacing: -3px;
     }
 
-    .intro {
-      max-width: 680px;
-      color: #555;
-      font-size: 19px;
-    }
-
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 0 25px 80px;
-    }
-
-    article {
-      border-top: 1px solid var(--line);
-      padding: 45px 0;
-    }
-
-    .post-meta {
+    .hero-text {
+      max-width: 650px;
       color: var(--muted);
-      text-transform: uppercase;
+      font-size: 16px;
+    }
+
+    .hero-note {
+      display: inline-block;
+      margin-top: 27px;
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      color: var(--muted);
       font-size: 11px;
-      font-weight: bold;
-      letter-spacing: 1.5px;
-      margin-bottom: 12px;
     }
 
-    h2 {
-      font-size: clamp(27px, 4vw, 38px);
-      letter-spacing: -1.3px;
-      line-height: 1.2;
-      margin: 0 0 22px;
+    .section {
+      padding: 75px 0;
     }
 
-    h3 {
-      font-size: 19px;
-      margin: 28px 0 8px;
+    .section-heading {
+      margin-bottom: 35px;
     }
 
-    article p {
-      color: #383838;
-      margin: 0 0 18px;
+    .section-heading h2 {
+      margin-top: 12px;
+      font-size: clamp(30px, 4vw, 42px);
+      letter-spacing: -1px;
     }
 
-    .highlight {
-      border-left: 2px solid #171717;
-      background: var(--surface);
-      padding: 17px 20px;
-      margin: 25px 0;
-      color: #444;
-    }
-
-    .stage {
-      margin: 22px 0;
-    }
-
-    .stage strong {
-      color: #171717;
-    }
-
-    .personalise {
-      font-size: 13px;
+    .section-heading p {
+      max-width: 620px;
+      margin-top: 12px;
       color: var(--muted);
+      font-size: 14px;
+    }
+
+    .featured {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.35);
+    }
+
+    .featured-aside {
+      display: flex;
+      min-height: 310px;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 32px;
+      background: var(--soft-green);
+    }
+
+    .featured-aside .large-number {
+      color: var(--green);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 72px;
+      line-height: 1;
+    }
+
+    .featured-aside p {
+      max-width: 230px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .featured-content {
+      padding: 38px;
+    }
+
+    .article-label {
+      color: var(--green);
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+
+    .featured-content h3 {
+      margin: 17px 0;
+      font-size: clamp(27px, 3vw, 36px);
+      letter-spacing: -0.8px;
+    }
+
+    .featured-content p {
+      margin-bottom: 15px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .reading-note {
+      padding-top: 15px;
       border-top: 1px solid var(--line);
-      padding-top: 18px;
-      margin-top: 30px;
+      color: var(--green);
+      font-size: 11px;
+    }
+
+    .journal-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .journal-card {
+      display: flex;
+      min-height: 270px;
+      flex-direction: column;
+      padding: 30px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .card-number {
+      color: var(--green);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 27px;
+    }
+
+    .journal-card h3 {
+      margin: 17px 0 12px;
+      font-size: 25px;
+    }
+
+    .journal-card p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .card-footer {
+      margin-top: auto;
+      padding-top: 22px;
+      color: var(--green);
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .reflection {
+      background: #eaece5;
+    }
+
+    .reflection-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .reflection h2 {
+      margin-top: 13px;
+      font-size: clamp(30px, 4vw, 43px);
+      letter-spacing: -1px;
+    }
+
+    .reflection-copy p {
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .principle {
+      padding: 20px 0;
+      border-top: 1px solid #cbd0c6;
+    }
+
+    .principle h3 {
+      margin-bottom: 7px;
+      font-size: 21px;
+    }
+
+    .principle p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .closing {
+      padding: 58px 0;
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .closing-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .closing .eyebrow {
+      color: #d0d9cf;
+    }
+
+    .closing h2 {
+      margin: 12px 0;
+      font-size: clamp(29px, 4vw, 42px);
+    }
+
+    .closing p {
+      color: #e0e6de;
+      font-size: 13px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 20px;
+      border: 1px solid var(--white);
+      color: var(--white);
+      font-size: 12px;
+      white-space: nowrap;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--white);
+      color: var(--green);
     }
 
     footer {
-      background: #171717;
-      color: #fff;
-      text-align: center;
-      padding: 30px 20px;
-      font-size: 13px;
+      padding: 25px 0;
+      border-top: 1px solid var(--line);
     }
 
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    footer p,
     footer a {
-      color: #fff;
+      color: var(--muted);
+      font-size: 11px;
     }
 
-    @media (max-width: 600px) {
-      .nav {
+    @media (max-width: 800px) {
+      .navigation {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        padding: 22px 0;
+        gap: 16px;
+      }
+
+      nav {
+        gap: 12px 19px;
+      }
+
+      .featured {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-aside {
+        min-height: 230px;
+      }
+
+      .reflection-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .closing-inner {
         align-items: flex-start;
         flex-direction: column;
       }
+    }
 
-      .hero {
-        padding-top: 55px;
+    @media (max-width: 550px) {
+      .container {
+        width: 90%;
       }
 
-      article {
-        padding: 32px 0;
+      .hero {
+        padding: 60px 0;
+      }
+
+      h1 {
+        letter-spacing: -1.5px;
+      }
+
+      .section {
+        padding: 55px 0;
+      }
+
+      .journal-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-content,
+      .featured-aside,
+      .journal-card {
+        padding: 24px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="topline"></div>
 
   <header>
-    <div class="nav">
-      <div class="brand">Thulani Seleke / Blog</div>
-      <a href="index.html">← Back to homepage</a>
+    <div class="container navigation">
+      <a class="brand" href="index.html">Thulani <span>Seleke.</span></a>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="cv.html">CV</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html" aria-current="page">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <div class="hero">
-    <div class="eyebrow">Notes on growth and development</div>
-    <h1>Learning in<br>progress.</h1>
-    <p class="intro">
-      Reflections on my experience as a Business Intelligence and
-      Data Analytics student, the skills I am developing and the
-      lessons I take from working with others.
-    </p>
-  </div>
-
   <main>
-    <article id="learning-journey">
-      <div class="post-meta">Reflection 01 · Academic development</div>
 
-      <h2>My Learning Journey: Building a Foundation for the Future</h2>
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Notes on learning · 04</p>
 
-      <p>
-        Beginning tertiary education is an important step in my personal
-        and academic development. As a first-year Business Intelligence
-        and Data Analytics student at Botswana Accountancy College,
-        I am learning to take greater responsibility for my education
-        and to consider how the knowledge I gain can be applied beyond
-        the classroom.
-      </p>
+        <h1>Ideas, lessons and the work behind progress.</h1>
 
-      <p>
-        One area I want to keep improving is time management. Tertiary
-        education requires students to balance lectures, assignments,
-        independent study and personal responsibilities. Planning ahead,
-        dividing larger tasks into manageable steps and starting work early
-        can help me reduce unnecessary pressure and produce better-quality work.
-      </p>
-
-      <p>
-        My interest in mathematics and computing gives me a useful
-        foundation for this programme. I am particularly interested in
-        how data can be organised, analysed and communicated to support
-        informed decisions. Developing in this field will require consistent
-        practice, attention to detail and a willingness to learn new tools.
-        I want to strengthen my technical confidence while also learning
-        to explain information clearly.
-      </p>
-
-      <p>
-        Communication and collaboration are also important parts of
-        learning. Working with other students exposes me to different
-        ideas and approaches. Listening carefully, asking questions when
-        something is unclear and contributing responsibly to group tasks
-        are habits I want to maintain.
-      </p>
-
-      <p>
-        Going forward, I intend to set realistic study goals, review class
-        material regularly and seek clarification when necessary. I also
-        want to use coursework and personal projects to practise relevant
-        digital skills. Challenges are part of learning; the important
-        thing is to identify what needs improvement and take practical
-        steps to address it.
-      </p>
-
-      <p>
-        For me, this journey is about more than completing assessments.
-        It is about becoming a disciplined, adaptable and responsible
-        person who can contribute positively in a professional environment.
-        By reflecting on my progress and applying what I learn, I aim to
-        build the knowledge and confidence needed for future opportunities
-        in data analytics.
-      </p>
-
-      <div class="highlight">
-        A key goal for my next stage of learning is to connect classroom
-        knowledge with practical work and keep building my confidence
-        with analytical tools.
-      </div>
-
-      <p class="personalise">
-        Personalisation reminder: add one genuine example from your
-        semester, such as a challenging assignment, a new tool you learned
-        or a study habit that helped you improve.
-      </p>
-    </article>
-
-    <article id="group-reflection">
-      <div class="post-meta">Reflection 02 · Collaboration</div>
-
-      <h2>Understanding Group Work Through Tuckman's Model</h2>
-
-      <p>
-        Group work provides an opportunity to practise communication,
-        shared responsibility and problem-solving. Tuckman's model
-        describes five stages of group development: Forming, Storming,
-        Norming, Performing and Adjourning. These stages provide a
-        framework for reflecting on how a team develops while working
-        towards a shared objective.
-      </p>
-
-      <div class="stage">
-        <h3>01. Forming</h3>
-        <p>
-          At the beginning of a group task, members become familiar with
-          one another and try to understand the requirements of the work.
-          Clear instructions and early discussion can help everyone
-          understand the shared objective.
+        <p class="hero-text">
+          A personal journal about learning to work with data, developing
+          technical skills and understanding the value of clear thinking.
+          The aim is not to have every answer, but to keep asking better questions.
         </p>
-        <p><em>[Add how your group was formed and how you first divided the work.]</em></p>
+
+        <span class="hero-note">A learning journal · Business intelligence · Personal growth</span>
       </div>
+    </section>
 
-      <div class="stage">
-        <h3>02. Storming</h3>
-        <p>
-          Different opinions, schedules and expectations can create
-          difficulties. Listening to one another and discussing concerns
-          respectfully can help a group work through these challenges.
-        </p>
-        <p><em>[Describe a real challenge your group faced, or explain how you avoided major disagreements.]</em></p>
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">Featured reflection</p>
+          <h2>Learning to think with data</h2>
+          <p>
+            An introduction to the mindset behind my developing interest
+            in business intelligence and data analytics.
+          </p>
+        </div>
+
+        <article class="featured">
+          <div class="featured-aside">
+            <span class="large-number">01</span>
+            <p>
+              Looking beyond the numbers to understand what information
+              can actually tell us.
+            </p>
+          </div>
+
+          <div class="featured-content">
+            <span class="article-label">Reflection · Data analytics</span>
+
+            <h3>Numbers become useful when they answer a question.</h3>
+
+            <p>
+              Data analytics is more than producing charts or calculating
+              totals. It begins with understanding a question, examining
+              the information available and deciding how to communicate
+              what the data supports.
+            </p>
+
+            <p>
+              Through practical work with datasets and dashboards, I am
+              learning the importance of preparation, accuracy and choosing
+              visualisations that make information easier to understand.
+            </p>
+
+            <p>
+              I am also learning to distinguish between what the data
+              demonstrates and what still needs further investigation.
+              A useful analysis should make information clearer without
+              claiming more than the evidence supports.
+            </p>
+
+            <div class="reading-note">
+              A principle I am developing: understand first, visualise second, conclude carefully.
+            </div>
+          </div>
+        </article>
+
       </div>
+    </section>
 
-      <div class="stage">
-        <h3>03. Norming</h3>
-        <p>
-          As a team becomes more organised, members develop shared
-          expectations and ways of communicating. Agreeing on deadlines
-          and responsibilities can improve coordination.
-        </p>
-        <p><em>[Explain the arrangements or routines your group used.]</em></p>
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">Topics I am exploring</p>
+          <h2>Learning in practice</h2>
+          <p>
+            These reflections describe areas of learning and professional
+            development rather than claiming completed publications or research.
+          </p>
+        </div>
+
+        <div class="journal-grid">
+
+          <article class="journal-card">
+            <span class="card-number">02</span>
+            <h3>Why data preparation matters</h3>
+            <p>
+              Reliable analysis begins before a chart is created. Cleaning
+              data, checking fields and understanding the structure of a
+              dataset help reduce confusion later in the process.
+            </p>
+            <div class="card-footer">Data quality · Preparation</div>
+          </article>
+
+          <article class="journal-card">
+            <span class="card-number">03</span>
+            <h3>Making dashboards more useful</h3>
+            <p>
+              A dashboard should help people explore information, not
+              overwhelm them. Clear measures, meaningful charts and
+              interactive filters can make reporting more practical.
+            </p>
+            <div class="card-footer">Power BI · Visualisation</div>
+          </article>
+
+          <article class="journal-card">
+            <span class="card-number">04</span>
+            <h3>The role of mathematics in analysis</h3>
+            <p>
+              Mathematical thinking encourages logical reasoning,
+              attention to detail and a structured approach to problems.
+              These habits are valuable when interpreting data and checking calculations.
+            </p>
+            <div class="card-footer">Mathematics · Reasoning</div>
+          </article>
+
+          <article class="journal-card">
+            <span class="card-number">05</span>
+            <h3>Learning through practical experience</h3>
+            <p>
+              Working with real tasks creates opportunities to connect
+              classroom concepts with practical decisions, discover gaps
+              in understanding and build skills through repeated practice.
+            </p>
+            <div class="card-footer">Practice · Development</div>
+          </article>
+
+        </div>
       </div>
+    </section>
 
-      <div class="stage">
-        <h3>04. Performing</h3>
-        <p>
-          At the performing stage, members coordinate their contributions
-          and focus on completing the task. Progress depends on each
-          person understanding and fulfilling their responsibilities.
-        </p>
-        <p><em>[Describe how your group completed the work and what you contributed.]</em></p>
+    <section class="section reflection">
+      <div class="container reflection-grid">
+
+        <div>
+          <p class="eyebrow">A personal perspective</p>
+          <h2>Progress is built through curiosity and consistency.</h2>
+        </div>
+
+        <div class="reflection-copy">
+          <p>
+            As a Business Intelligence and Data Analytics student, I am
+            building my knowledge step by step. Some concepts become clearer
+            through study, while others require practice, experimentation
+            and the willingness to revisit a problem.
+          </p>
+
+          <p>
+            My goal is to develop sound technical foundations while
+            strengthening the communication and analytical skills needed
+            to turn information into something useful.
+          </p>
+
+          <div class="principle">
+            <h3>Stay curious</h3>
+            <p>Ask questions before accepting an answer or an assumption.</p>
+          </div>
+
+          <div class="principle">
+            <h3>Work carefully</h3>
+            <p>Check the information, calculations and reasoning behind a result.</p>
+          </div>
+
+          <div class="principle">
+            <h3>Keep improving</h3>
+            <p>Use every project and challenge as an opportunity to learn.</p>
+          </div>
+        </div>
+
       </div>
+    </section>
 
-      <div class="stage">
-        <h3>05. Adjourning</h3>
-        <p>
-          The final stage involves completing the task and reflecting on
-          what the team achieved and what could be improved in future.
-        </p>
-        <p><em>[Explain the outcome of your project and one lesson you learned.]</em></p>
+    <section class="closing">
+      <div class="container closing-inner">
+        <div>
+          <p class="eyebrow">Continue the conversation</p>
+          <h2>Interested in my work?</h2>
+          <p>
+            Explore my projects or get in touch about learning and
+            professional opportunities.
+          </p>
+        </div>
+
+        <a class="button" href="projects.html">Explore projects</a>
       </div>
+    </section>
 
-      <p>
-        This model helps show that successful teamwork involves more than
-        dividing tasks. It also requires accountability, communication,
-        respect and a willingness to adapt. In future group projects,
-        I want to clarify expectations early, contribute consistently
-        and communicate openly when challenges arise.
-      </p>
-
-      <div class="highlight">
-        My main takeaway is that effective teamwork depends on both
-        individual responsibility and the way team members support
-        the group's shared goal.
-      </div>
-
-      <p class="personalise">
-        Before submitting this reflection, replace every bracketed prompt
-        with details from your actual group project. Use examples that
-        accurately describe your experience.
-      </p>
-    </article>
   </main>
 
   <footer>
-    <p><strong>Thulani Dawin Seleke</strong></p>
-    <p>Business Intelligence and Data Analytics</p>
-    <p><a href="index.html">Homepage</a></p>
+    <div class="container footer-inner">
+      <p>© 2026 Thulani Dawin Seleke. All rights reserved.</p>
+      <a href="index.html">Back to homepage ↑</a>
+    </div>
   </footer>
+
 </body>
 </html>

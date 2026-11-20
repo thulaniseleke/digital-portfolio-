@@ -1,0 +1,772 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About | Thulani Dawin Seleke</title>
+
+    <meta name="description" content="Learn about Thulani Dawin Seleke, his education, interests, values, and developing career in business intelligence and data analytics.">
+
+    <meta name="theme-color" content="#f5f4ef">
+
+    <style>
+        :root {
+            --paper: #f5f4ef;
+            --white: #fffefa;
+            --ink: #20221f;
+            --muted: #777a72;
+            --green: #40594b;
+            --green-light: #e4e9e1;
+            --line: #dcdcd3;
+            --serif: Georgia, "Times New Roman", serif;
+            --sans: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--paper);
+            color: var(--ink);
+            font-family: var(--sans);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:focus-visible {
+            outline: 2px solid var(--green);
+            outline-offset: 5px;
+        }
+
+        .container {
+            width: min(1160px, 88%);
+            margin: 0 auto;
+        }
+
+        .site-header {
+            border-bottom: 1px solid var(--line);
+        }
+
+        .navigation {
+            min-height: 84px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .wordmark {
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1.7px;
+            white-space: nowrap;
+        }
+
+        .wordmark span {
+            color: var(--green);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            font-size: 12px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a[aria-current="page"] {
+            color: var(--ink);
+        }
+
+        .nav-links .contact-link {
+            color: var(--ink);
+            border-bottom: 1px solid var(--green);
+            padding-bottom: 4px;
+        }
+
+        .hero {
+            padding: 95px 0 75px;
+            max-width: 920px;
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--green);
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2.8px;
+            margin-bottom: 25px;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 30px;
+            height: 1px;
+            background: var(--green);
+        }
+
+        h1 {
+            font-family: var(--serif);
+            font-size: clamp(47px, 7vw, 82px);
+            font-weight: 400;
+            line-height: 1.05;
+            letter-spacing: -3px;
+            max-width: 850px;
+        }
+
+        h1 em {
+            color: var(--green);
+            font-weight: 400;
+        }
+
+        .hero-description {
+            max-width: 650px;
+            color: var(--muted);
+            font-size: 16px;
+            margin-top: 28px;
+        }
+
+        .section {
+            padding: 72px 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .section-heading {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .section-number {
+            color: var(--green);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding-top: 9px;
+        }
+
+        h2 {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: clamp(32px, 4vw, 47px);
+            line-height: 1.15;
+            letter-spacing: -1px;
+        }
+
+        .section-intro {
+            color: var(--muted);
+            max-width: 650px;
+            margin-top: 14px;
+            font-size: 14px;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .story-copy p {
+            color: #555850;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .story-copy p:last-child {
+            margin-bottom: 0;
+        }
+
+        .quote-panel {
+            background: var(--green-light);
+            padding: 32px;
+        }
+
+        .quote-mark {
+            font-family: var(--serif);
+            font-size: 60px;
+            line-height: 1;
+            color: var(--green);
+        }
+
+        .quote-panel blockquote {
+            font-family: var(--serif);
+            font-size: 25px;
+            line-height: 1.4;
+            margin: 15px 0 25px;
+        }
+
+        .quote-panel p {
+            font-size: 10px;
+            color: var(--muted);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            border-top: 1px solid var(--line);
+            border-left: 1px solid var(--line);
+        }
+
+        .value-card {
+            padding: 27px;
+            border-right: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .value-card .number {
+            color: var(--green);
+            font-size: 11px;
+            letter-spacing: 1px;
+            margin-bottom: 22px;
+        }
+
+        .value-card h3 {
+            font-family: var(--serif);
+            font-size: 23px;
+            font-weight: 400;
+            margin-bottom: 9px;
+        }
+
+        .value-card p {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .education-list {
+            border-top: 1px solid var(--line);
+        }
+
+        .education-item {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 30px;
+            padding: 25px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .education-label {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .education-item h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .education-item p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 15px;
+        }
+
+        .interest {
+            background: var(--white);
+            border: 1px solid var(--line);
+            padding: 24px;
+        }
+
+        .interest h3 {
+            font-family: var(--serif);
+            font-size: 21px;
+            font-weight: 400;
+            margin-bottom: 9px;
+        }
+
+        .interest p {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .direction-panel {
+            background: #242923;
+            color: var(--paper);
+            padding: clamp(28px, 6vw, 55px);
+        }
+
+        .direction-panel .section-number {
+            margin-bottom: 22px;
+            color: #b6c5b6;
+        }
+
+        .direction-panel h2 {
+            max-width: 760px;
+        }
+
+        .direction-panel p {
+            color: #c5c8c0;
+            font-size: 14px;
+            max-width: 680px;
+            margin-top: 22px;
+        }
+
+        .direction-panel a {
+            display: inline-block;
+            margin-top: 28px;
+            font-size: 12px;
+            border-bottom: 1px solid #b6c5b6;
+            padding-bottom: 5px;
+        }
+
+        footer {
+            padding: 27px 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-content p,
+        .footer-links a {
+            font-size: 11px;
+            color: var(--muted);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a:hover {
+            color: var(--ink);
+        }
+
+        @media (max-width: 850px) {
+            .navigation {
+                padding: 20px 0;
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 17px;
+            }
+
+            .nav-links {
+                gap: 14px 20px;
+            }
+
+            .story-grid {
+                gap: 30px;
+            }
+
+            .section-heading {
+                grid-template-columns: 120px 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+            }
+
+            .hero {
+                padding: 65px 0;
+            }
+
+            h1 {
+                font-size: 49px;
+                letter-spacing: -2px;
+            }
+
+            .section {
+                padding: 55px 0;
+            }
+
+            .section-heading,
+            .story-grid,
+            .education-item {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .values-grid,
+            .interests-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .value-card {
+                padding: 23px;
+            }
+
+            .value-card .number {
+                margin-bottom: 13px;
+            }
+
+            .footer-content {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container navigation">
+
+        <a href="index.html" class="wordmark">
+            THULANI <span>SELEKE.</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html" aria-current="page">About</a>
+            <a href="cv.html">CV</a>
+            <a href="projects.html">Projects</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html" class="contact-link">Contact ↗</a>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+    <section class="container hero">
+        <div class="eyebrow">About Thulani</div>
+
+        <h1>
+            A developing mind, guided by
+            <em>curiosity and purpose.</em>
+        </h1>
+
+        <p class="hero-description">
+            I am Thulani Dawin Seleke, a student of Business Intelligence
+            and Data Analytics at Botswana Accountancy College. My
+            interests in mathematics, computing, and problem-solving
+            continue to shape the direction I am taking academically
+            and professionally.
+        </p>
+    </section>
+
+    <section class="section">
+        <div class="container">
+
+            <div class="section-heading">
+                <div class="section-number">01 / My Story</div>
+
+                <div>
+                    <h2>Understanding the person behind the work.</h2>
+
+                    <p class="section-intro">
+                        My journey is about developing a strong foundation,
+                        learning through experience, and discovering how
+                        analytical thinking can be applied in practice.
+                    </p>
+                </div>
+            </div>
+
+            <div class="story-grid">
+
+                <div class="story-copy">
+                    <p>
+                        My academic journey has led me to Business
+                        Intelligence and Data Analytics, a field that
+                        brings together structured thinking, technology,
+                        and the interpretation of information.
+                    </p>
+
+                    <p>
+                        I am interested in how data can help people
+                        understand situations, identify patterns, and
+                        make better-informed decisions. As a student,
+                        I am developing my knowledge step by step,
+                        connecting classroom learning with practical
+                        analytical work.
+                    </p>
+
+                    <p>
+                        My earlier education provided a foundation in
+                        mathematics, science, and communication. These
+                        subjects continue to influence how I approach
+                        problems: by asking questions, examining details,
+                        and working towards a clear explanation.
+                    </p>
+
+                    <p>
+                        I also value experiences beyond the classroom.
+                        Administrative responsibilities and working
+                        with others have given me opportunities to
+                        appreciate organisation, accountability,
+                        communication, and the importance of following
+                        tasks through.
+                    </p>
+                </div>
+
+                <aside class="quote-panel">
+                    <div class="quote-mark">“</div>
+
+                    <blockquote>
+                        Progress comes from remaining willing to learn,
+                        practise, and improve.
+                    </blockquote>
+
+                    <p>A principle for continuous development</p>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+
+            <div class="section-heading">
+                <div class="section-number">02 / Values</div>
+
+                <div>
+                    <h2>The principles behind my development.</h2>
+
+                    <p class="section-intro">
+                        These are the qualities I aim to strengthen
+                        as I grow academically and prepare for
+                        professional responsibilities.
+                    </p>
+                </div>
+            </div>
+
+            <div class="values-grid">
+
+                <article class="value-card">
+                    <div class="number">01</div>
+                    <h3>Analytical thinking</h3>
+                    <p>
+                        Breaking down questions, examining information,
+                        and approaching problems in a structured way.
+                    </p>
+                </article>
+
+                <article class="value-card">
+                    <div class="number">02</div>
+                    <h3>Continuous learning</h3>
+                    <p>
+                        Remaining open to new concepts, feedback,
+                        unfamiliar tools, and opportunities to improve.
+                    </p>
+                </article>
+
+                <article class="value-card">
+                    <div class="number">03</div>
+                    <h3>Responsibility</h3>
+                    <p>
+                        Taking tasks seriously, managing information
+                        carefully, and recognising the importance
+                        of accuracy and follow-through.
+                    </p>
+                </article>
+
+                <article class="value-card">
+                    <div class="number">04</div>
+                    <h3>Collaboration</h3>
+                    <p>
+                        Listening to different perspectives,
+                        communicating respectfully, and contributing
+                        towards shared objectives.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+
+            <div class="section-heading">
+                <div class="section-number">03 / Education</div>
+
+                <div>
+                    <h2>The foundation so far.</h2>
+
+                    <p class="section-intro">
+                        My education has provided a starting point
+                        for the technical and analytical knowledge
+                        I am continuing to develop.
+                    </p>
+                </div>
+            </div>
+
+            <div class="education-list">
+
+                <article class="education-item">
+                    <div class="education-label">Current studies</div>
+
+                    <div>
+                        <h3>Botswana Accountancy College</h3>
+                        <p>
+                            Business Intelligence and Data Analytics
+                            · First-year student
+                        </p>
+                    </div>
+                </article>
+
+                <article class="education-item">
+                    <div class="education-label">Secondary education</div>
+
+                    <div>
+                        <h3>Premix Academy</h3>
+                        <p>Form 5 · 40 points</p>
+                    </div>
+                </article>
+
+                <article class="education-item">
+                    <div class="education-label">Junior secondary</div>
+
+                    <div>
+                        <h3>Radikolo Junior Secondary School</h3>
+                        <p>Junior Certificate · 41 points</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <p class="section-intro" style="margin-top: 22px;">
+                For the complete education and experience record,
+                visit the <a href="cv.html"><strong>curriculum vitae →</strong></a>
+            </p>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+
+            <div class="section-heading">
+                <div class="section-number">04 / Interests</div>
+
+                <div>
+                    <h2>Beyond the classroom.</h2>
+
+                    <p class="section-intro">
+                        The subjects and activities that contribute
+                        to my curiosity, perspective, and personal growth.
+                    </p>
+                </div>
+            </div>
+
+            <div class="interests-grid">
+
+                <article class="interest">
+                    <h3>Mathematics</h3>
+                    <p>
+                        Logical reasoning, quantitative thinking,
+                        and working through challenging problems.
+                    </p>
+                </article>
+
+                <article class="interest">
+                    <h3>Computing</h3>
+                    <p>
+                        Technology, digital tools, and the possibilities
+                        they create for understanding information.
+                    </p>
+                </article>
+
+                <article class="interest">
+                    <h3>Soccer</h3>
+                    <p>
+                        An appreciation for teamwork, discipline,
+                        shared effort, and the game itself.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+
+            <div class="direction-panel">
+                <div class="section-number">05 / Looking Ahead</div>
+
+                <h2>Building knowledge that can be put to work.</h2>
+
+                <p>
+                    My focus is on strengthening my analytical
+                    foundations, gaining practical experience, and
+                    learning how to communicate findings clearly.
+                    I see each project and learning opportunity as
+                    a chance to develop greater understanding and
+                    professional capability.
+                </p>
+
+                <a href="projects.html">
+                    Explore my projects →
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container footer-content">
+
+        <p>© 2026 Thulani Dawin Seleke. Personal portfolio.</p>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="cv.html">CV</a>
+            <a href="projects.html">Projects</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </div>
+</footer>
+
+</body>
+</html>

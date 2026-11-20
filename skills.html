@@ -1,0 +1,534 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Skills, practical experience and projects of Thulani Dawin Seleke.">
+  <title>Skills & Projects | Thulani Dawin Seleke</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --ink: #171717;
+      --muted: #707070;
+      --line: #e5e5e5;
+      --surface: #fafafa;
+    }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+      text-underline-offset: 4px;
+    }
+
+    .topline {
+      height: 3px;
+      background: var(--ink);
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      max-width: 1050px;
+      margin: auto;
+      padding: 22px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .nav a {
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      max-width: 1050px;
+      margin: auto;
+      padding: 75px 25px 65px;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 74px);
+      line-height: 1.05;
+      letter-spacing: -3px;
+      margin: 18px 0;
+    }
+
+    .intro {
+      font-size: 19px;
+      max-width: 720px;
+      color: #555;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 0 25px 80px;
+    }
+
+    section {
+      padding: 38px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 25px;
+      margin-bottom: 25px;
+    }
+
+    .section-no {
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      font-weight: bold;
+      color: var(--muted);
+      padding-top: 7px;
+    }
+
+    h2 {
+      font-size: 30px;
+      letter-spacing: -1px;
+      line-height: 1.2;
+      margin: 0 0 15px;
+    }
+
+    h3 {
+      font-size: 19px;
+      margin: 0 0 8px;
+    }
+
+    p {
+      margin-top: 8px;
+    }
+
+    .lead {
+      color: #666;
+      margin: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      padding: 24px;
+      background: #fff;
+    }
+
+    .card-number {
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      font-weight: bold;
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .tag-list li {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      padding: 6px 10px;
+      font-size: 13px;
+    }
+
+    .project {
+      border: 1px solid var(--line);
+      padding: 26px;
+      margin-bottom: 16px;
+    }
+
+    .project:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-type {
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      font-size: 11px;
+      font-weight: bold;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .note {
+      background: var(--surface);
+      border-left: 2px solid var(--ink);
+      padding: 15px 18px;
+      color: #555;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--ink);
+      color: #fff;
+      padding: 11px 16px;
+      text-decoration: none;
+      font-size: 14px;
+      margin-top: 12px;
+    }
+
+    .button:hover {
+      background: #444;
+    }
+
+    footer {
+      background: var(--ink);
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: #fff;
+    }
+
+    @media (max-width: 650px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .hero {
+        padding-top: 50px;
+      }
+
+      .section-head {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topline"></div>
+
+  <header>
+    <div class="nav">
+      <div class="brand">Thulani Seleke / Portfolio</div>
+      <a href="index.html">← Back to homepage</a>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="eyebrow">Capabilities & practical work</div>
+    <h1>Skills &<br>projects.</h1>
+    <p class="intro">
+      A record of the analytical, digital, communication and
+      administrative skills I am developing through education
+      and practical experience.
+    </p>
+  </div>
+
+  <main>
+    <section>
+      <div class="section-head">
+        <div class="section-no">01 / ANALYTICAL</div>
+        <div>
+          <h2>Mathematics & problem-solving</h2>
+          <p class="lead">
+            My academic background has helped me develop logical
+            reasoning, numerical confidence and a structured approach
+            to working through problems.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <div class="card-number">01.01</div>
+          <h3>Mathematical reasoning</h3>
+          <p>
+            Applying mathematical concepts, identifying relationships
+            and approaching questions systematically.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-number">01.02</div>
+          <h3>Analytical thinking</h3>
+          <p>
+            Breaking problems into smaller parts, examining information
+            and considering possible solutions before reaching a conclusion.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-no">02 / DIGITAL</div>
+        <div>
+          <h2>Computing & digital skills</h2>
+          <p class="lead">
+            I am building my confidence with digital tools and learning
+            how technology can support the organisation, analysis and
+            presentation of information.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <div class="card-number">02.01</div>
+          <h3>Computer literacy</h3>
+          <p>
+            Using computers to support academic work, prepare documents
+            and organise information.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-number">02.02</div>
+          <h3>Business intelligence</h3>
+          <p>
+            Developing an understanding of how data can be structured,
+            analysed and presented to support decisions.
+          </p>
+        </article>
+      </div>
+
+      <div class="note">
+        Add tools such as Excel, Power BI, SQL or Python only where
+        they reflect your actual experience. You can also identify
+        whether a tool is a beginner, developing or confident skill.
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-no">03 / PROFESSIONAL</div>
+        <div>
+          <h2>Professional competencies</h2>
+          <p class="lead">
+            Skills developed through study, collaboration and
+            administrative responsibilities.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Communication</h3>
+          <p>
+            Communicating in English and Setswana, sharing information
+            and engaging with others in academic and practical settings.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Teamwork</h3>
+          <p>
+            Contributing to group activities, respecting different
+            perspectives and working towards shared objectives.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Organisation</h3>
+          <p>
+            Keeping tasks in order, managing responsibilities and
+            recognising the importance of completing work on time.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Attention to detail</h3>
+          <p>
+            Understanding the importance of accurate records and
+            careful handling of administrative information.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-no">04 / EXPERIENCE</div>
+        <div>
+          <h2>Practical experience</h2>
+          <p class="lead">
+            Examples of how I have applied responsibility and
+            organisation in real-world settings.
+          </p>
+        </div>
+      </div>
+
+      <article class="project">
+        <div class="project-type">Administrative support</div>
+        <h3>FIFA Connect player administration</h3>
+        <p>
+          Supported player registrations, transfers, renewals and
+          updates for Marhio Fighters (Pty) Ltd and Mochudi United
+          Sporting Club.
+        </p>
+        <p>
+          This experience relates to record management, accuracy,
+          process coordination and handling information responsibly.
+        </p>
+      </article>
+
+      <article class="project">
+        <div class="project-type">Business support</div>
+        <h3>Flowers by Lelo</h3>
+        <p>
+          Assisted with social media page management, receiving
+          orders, arranging flowers and delivering customer orders.
+        </p>
+        <p>
+          These responsibilities provided exposure to customer service,
+          organisation and day-to-day business activities.
+        </p>
+      </article>
+
+      <article class="project">
+        <div class="project-type">Payment administration</div>
+        <h3>Temo Letlotlo</h3>
+        <p>
+          Supported payment administration for ploughing, harrowing
+          and planting fields.
+        </p>
+        <p>
+          This work required attention to administrative processes
+          and the accurate handling of information.
+        </p>
+      </article>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-no">05 / PROJECTS</div>
+        <div>
+          <h2>Academic & data projects</h2>
+          <p class="lead">
+            Use this section to document completed coursework and
+            demonstrate how you apply what you learn.
+          </p>
+        </div>
+      </div>
+
+      <article class="project">
+        <div class="project-type">Academic project · Data analysis</div>
+        <h3>NYC Taxi Data Analysis</h3>
+        <p>
+          A data analysis project using a New York City taxi dataset
+          to practise data preparation, quantitative and categorical
+          analysis, and dashboard reporting.
+        </p>
+
+        <p>
+          Work on this project can include cleaning data, exploring
+          trip and fare information, comparing categories and
+          presenting findings through charts and key performance indicators.
+        </p>
+
+        <p><strong>Tools:</strong> Power BI and Excel, where applicable to the completed work.</p>
+
+        <div class="note">
+          Add screenshots of your actual dashboard and explain two or
+          three findings from your own analysis. Do not claim findings
+          until you have verified them from your results.
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-type">Future project</div>
+        <h3>Additional data analytics work</h3>
+        <p>
+          This space can be used for future projects involving
+          spreadsheets, visualisation, reporting, databases or
+          statistical analysis.
+        </p>
+        <p>
+          For each completed project, describe the problem, dataset,
+          tools, process, outcome and what you learned.
+        </p>
+      </article>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-no">06 / DEVELOPMENT</div>
+        <div>
+          <h2>Current learning goals</h2>
+          <p class="lead">
+            Areas I intend to strengthen as I progress through my degree.
+          </p>
+        </div>
+      </div>
+
+      <ul>
+        <li>Build stronger spreadsheet and data-cleaning skills.</li>
+        <li>Improve data visualisation and dashboard design.</li>
+        <li>Develop analytical thinking through practical assignments.</li>
+        <li>Improve the way I communicate findings from data.</li>
+        <li>Build a portfolio of genuine academic and personal projects.</li>
+      </ul>
+
+      <a class="button" href="cv.html">View my CV</a>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Thulani Dawin Seleke</strong></p>
+    <p>Business Intelligence and Data Analytics</p>
+    <p>
+      <a href="index.html">Home</a> ·
+      <a href="cv.html">CV</a> ·
+      <a href="blog.html">Learning blog</a>
+    </p>
+  </footer>
+</body>
+</html>

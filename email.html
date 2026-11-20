@@ -1,0 +1,453 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Professional Email | Thulani Dawin Seleke</title>
+
+    <meta name="description"
+          content="Professional email template for industrial attachment enquiries by Thulani Dawin Seleke.">
+
+    <style>
+        :root {
+            --background: #f7f7f5;
+            --surface: #ffffff;
+            --text: #171717;
+            --muted: #707070;
+            --line: #deded9;
+            --accent: #354b43;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1080px, 90%);
+            margin: auto;
+        }
+
+        header {
+            padding: 25px 0;
+            border-bottom: 1px solid var(--line);
+            background: var(--background);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .brand {
+            font-size: 15px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 19px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+        .hero {
+            padding: 85px 0 55px;
+            max-width: 780px;
+        }
+
+        .eyebrow {
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(38px, 7vw, 68px);
+            line-height: 1.08;
+            letter-spacing: -2.5px;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 17px;
+            color: var(--muted);
+            max-width: 650px;
+        }
+
+        section {
+            padding: 35px 0 65px;
+        }
+
+        .section-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--muted);
+            margin-bottom: 14px;
+        }
+
+        h2 {
+            font-size: 29px;
+            letter-spacing: -0.8px;
+            margin-bottom: 15px;
+        }
+
+        .intro {
+            color: var(--muted);
+            max-width: 700px;
+            margin-bottom: 28px;
+        }
+
+        .email-card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 5px;
+            padding: clamp(22px, 5vw, 45px);
+        }
+
+        .email-meta {
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 22px;
+            margin-bottom: 25px;
+        }
+
+        .meta-row {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 12px;
+            margin-bottom: 9px;
+            font-size: 14px;
+        }
+
+        .meta-label {
+            color: var(--muted);
+        }
+
+        .email-body p {
+            margin-bottom: 19px;
+        }
+
+        .signature {
+            margin-top: 28px;
+        }
+
+        .signature strong {
+            display: block;
+            font-size: 16px;
+        }
+
+        .signature span {
+            display: block;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .note {
+            margin-top: 24px;
+            padding: 20px;
+            border-left: 3px solid var(--accent);
+            background: #efefeb;
+            font-size: 14px;
+            color: #454545;
+        }
+
+        .checklist {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .checklist li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .checklist li::before {
+            content: "— ";
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .button-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 20px;
+            border: 1px solid var(--text);
+            background: var(--text);
+            color: white;
+            font-size: 13px;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .button.secondary {
+            background: transparent;
+            color: var(--text);
+        }
+
+        footer {
+            border-top: 1px solid var(--line);
+            padding: 28px 0;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding-top: 60px;
+            }
+
+            .nav {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .meta-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+                margin-bottom: 15px;
+            }
+
+            h1 {
+                letter-spacing: -1.5px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            header,
+            .hero,
+            .instructions,
+            .button-row,
+            footer {
+                display: none;
+            }
+
+            section {
+                padding: 0;
+            }
+
+            .email-card {
+                border: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container nav">
+        <a href="index.html" class="brand">THULANI SELEKE.</a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="cv.html">CV</a>
+            <a href="blog.html">Blog</a>
+            <a href="skills.html">Skills & Projects</a>
+            <a href="application.html">Application Letter</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <div class="hero">
+        <div class="eyebrow">Professional Communication</div>
+
+        <h1>A thoughtful approach to professional correspondence.</h1>
+
+        <p>
+            Clear communication is an important part of building professional
+            relationships. This page contains an email template for enquiring
+            about industrial attachment opportunities in business intelligence,
+            data analytics, information technology, and related fields.
+        </p>
+    </div>
+
+    <section>
+        <div class="section-label">01 / Email Template</div>
+
+        <h2>Industrial attachment enquiry</h2>
+
+        <p class="intro">
+            Use this template when contacting a company or organisation.
+            Replace the bracketed information with the correct details before
+            sending the email.
+        </p>
+
+        <div class="email-card">
+
+            <div class="email-meta">
+                <div class="meta-row">
+                    <span class="meta-label">To</span>
+                    <span>[Recipient's professional email address]</span>
+                </div>
+
+                <div class="meta-row">
+                    <span class="meta-label">Subject</span>
+                    <strong>Enquiry Regarding Industrial Attachment Opportunities</strong>
+                </div>
+            </div>
+
+            <div class="email-body">
+                <p>Dear [Recipient's Name or Hiring Manager],</p>
+
+                <p>
+                    I hope this email finds you well.
+                </p>
+
+                <p>
+                    My name is Thulani Dawin Seleke, and I am a first-year
+                    Business Intelligence and Data Analytics student at
+                    Botswana Accountancy College. I am writing to enquire
+                    about the possibility of undertaking an industrial
+                    attachment with your organisation.
+                </p>
+
+                <p>
+                    I am interested in developing my practical understanding
+                    of data analysis, business intelligence, reporting, and
+                    the use of data to support informed decision-making.
+                    I am eager to learn from experienced professionals and
+                    contribute positively to the work of your team.
+                </p>
+
+                <p>
+                    Through my academic work and previous administrative
+                    experience, I have developed an appreciation for
+                    organisation, communication, teamwork, and accurate
+                    information management. I would welcome the opportunity
+                    to build on these foundations in a professional environment.
+                </p>
+
+                <p>
+                    I would appreciate it if you could advise me whether
+                    industrial attachment opportunities are available within
+                    your organisation and share any relevant application
+                    requirements.
+                </p>
+
+                <p>
+                    I have attached my CV for your consideration and would
+                    be happy to provide any additional information required.
+                </p>
+
+                <p>
+                    Thank you for your time and consideration. I look
+                    forward to hearing from you.
+                </p>
+
+                <div class="signature">
+                    <p>Kind regards,</p>
+                    <strong>Thulani Dawin Seleke</strong>
+                    <span>Business Intelligence and Data Analytics Student</span>
+                    <span>Botswana Accountancy College</span>
+                    <span>Phone: +267 76910345</span>
+                    <span>Email: selekedawin@gmail.com</span>
+                    <span>Mochudi, Botswana</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="button-row">
+            <button class="button" onclick="window.print()">
+                Print / Save as PDF
+            </button>
+
+            <a class="button secondary" href="cv.html">
+                View CV
+            </a>
+        </div>
+    </section>
+
+    <section class="instructions">
+        <div class="section-label">02 / Before Sending</div>
+
+        <h2>Make every email specific.</h2>
+
+        <p class="intro">
+            A professional enquiry should show that you understand whom
+            you are contacting and why their organisation interests you.
+        </p>
+
+        <ul class="checklist">
+            <li>Address the correct person whenever their name is available.</li>
+            <li>Use the organisation's actual name in your message.</li>
+            <li>State your expected attachment dates if they are confirmed.</li>
+            <li>Attach your CV and any other documents requested.</li>
+            <li>Use a professional email address and check your spelling.</li>
+            <li>Follow the organisation's application instructions.</li>
+        </ul>
+
+        <div class="note">
+            <strong>Important:</strong> Do not send the template without
+            reviewing it. Confirm that the organisation offers relevant
+            opportunities, personalise the message, and attach your CV
+            before sending.
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container footer-inner">
+        <span>© 2026 Thulani Dawin Seleke</span>
+        <span>Business Intelligence · Data Analytics · Professional Growth</span>
+    </div>
+</footer>
+
+</body>
+</html>

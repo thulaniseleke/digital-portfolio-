@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Learning Resources | Thulani Dawin Seleke</title>
+
+    <meta name="description"
+          content="Learning resources for business intelligence, data analytics, programming, and professional development.">
+
+    <style>
+        :root {
+            --background: #f7f7f5;
+            --surface: #ffffff;
+            --text: #171717;
+            --muted: #707070;
+            --line: #deded9;
+            --accent: #354b43;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1080px, 90%);
+            margin: auto;
+        }
+
+        header {
+            padding: 25px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .brand {
+            font-size: 15px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 19px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+        .hero {
+            padding: 85px 0 55px;
+            max-width: 800px;
+        }
+
+        .eyebrow {
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(38px, 7vw, 68px);
+            line-height: 1.08;
+            letter-spacing: -2.5px;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 17px;
+            color: var(--muted);
+            max-width: 700px;
+        }
+
+        section {
+            padding: 35px 0 65px;
+        }
+
+        .section-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--muted);
+            margin-bottom: 14px;
+        }
+
+        h2 {
+            font-size: 29px;
+            letter-spacing: -0.8px;
+            margin-bottom: 15px;
+        }
+
+        .intro {
+            color: var(--muted);
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .resource-card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            padding: 28px;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .resource-number {
+            color: var(--accent);
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin-bottom: 17px;
+        }
+
+        .resource-card h3 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .resource-card p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 22px;
+            flex-grow: 1;
+        }
+
+        .resource-link {
+            display: inline-block;
+            border-bottom: 1px solid var(--text);
+            padding-bottom: 3px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .resource-link:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .plan {
+            background: #eeefeb;
+            border: 1px solid var(--line);
+            padding: clamp(24px, 5vw, 40px);
+        }
+
+        .plan-item {
+            display: grid;
+            grid-template-columns: 130px 1fr;
+            gap: 20px;
+            padding: 18px 0;
+            border-bottom: 1px solid #d5d7d1;
+        }
+
+        .plan-item:last-child {
+            border-bottom: none;
+        }
+
+        .plan-item strong {
+            font-size: 14px;
+        }
+
+        .plan-item p {
+            color: #5f625e;
+            font-size: 14px;
+        }
+
+        .note {
+            margin-top: 25px;
+            padding: 20px;
+            border-left: 3px solid var(--accent);
+            background: var(--surface);
+            font-size: 14px;
+            color: #454545;
+        }
+
+        footer {
+            border-top: 1px solid var(--line);
+            padding: 28px 0;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 650px) {
+            .resource-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .plan-item {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+
+            .hero {
+                padding-top: 60px;
+            }
+
+            h1 {
+                letter-spacing: -1.5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container nav">
+        <a href="index.html" class="brand">THULANI SELEKE.</a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="cv.html">CV</a>
+            <a href="blog.html">Blog</a>
+            <a href="skills.html">Skills & Projects</a>
+            <a href="application.html">Application Letter</a>
+            <a href="email.html">Email</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <div class="hero">
+        <div class="eyebrow">Continuous Learning</div>
+
+        <h1>Building knowledge. Developing capability.</h1>
+
+        <p>
+            My development in Business Intelligence and Data Analytics
+            involves strengthening technical foundations, exploring
+            analytical tools, and learning how to turn information into
+            useful insights. These resources provide opportunities to
+            practise, explore, and develop beyond the classroom.
+        </p>
+    </div>
+
+    <section>
+        <div class="section-label">01 / Learning Library</div>
+
+        <h2>Tools and learning platforms</h2>
+
+        <p class="intro">
+            A selection of resources for developing practical skills
+            relevant to data analytics and business intelligence.
+        </p>
+
+        <div class="resource-grid">
+
+            <article class="resource-card">
+                <div class="resource-number">01 / VISUALISATION</div>
+                <h3>Microsoft Learn — Power BI</h3>
+                <p>
+                    Explore guided learning paths for creating reports,
+                    preparing data, building data models, and developing
+                    interactive dashboards.
+                </p>
+                <a class="resource-link"
+                   href="https://learn.microsoft.com/en-us/training/powerplatform/power-bi/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Explore Power BI learning →
+                </a>
+            </article>
+
+            <article class="resource-card">
+                <div class="resource-number">02 / SPREADSHEETS</div>
+                <h3>Microsoft Excel Help</h3>
+                <p>
+                    Strengthen spreadsheet skills through guidance on
+                    formulas, functions, tables, charts, PivotTables,
+                    and data organisation.
+                </p>
+                <a class="resource-link"
+                   href="https://support.microsoft.com/excel"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Explore Excel resources →
+                </a>
+            </article>
+
+            <article class="resource-card">
+                <div class="resource-number">03 / DATABASES</div>
+                <h3>SQLBolt</h3>
+                <p>
+                    Practise the fundamentals of SQL through interactive
+                    lessons covering queries, filtering, sorting,
+                    joins, and working with relational data.
+                </p>
+                <a class="resource-link"
+                   href="https://sqlbolt.com/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Practise SQL →
+                </a>
+            </article>
+
+            <article class="resource-card">
+                <div class="resource-number">04 / PROGRAMMING</div>
+                <h3>Python Documentation</h3>
+                <p>
+                    Use the official Python tutorial to begin exploring
+                    programming concepts, data structures, functions,
+                    and writing reusable code.
+                </p>
+                <a class="resource-link"
+                   href="https://docs.python.org/3/tutorial/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Learn Python →
+                </a>
+            </article>
+
+            <article class="resource-card">
+                <div class="resource-number">05 / DATA PRACTICE</div>
+                <h3>Kaggle</h3>
+                <p>
+                    Discover datasets and notebooks that can support
+                    independent practice, exploratory data analysis,
+                    and the development of portfolio projects.
+                </p>
+                <a class="resource-link"
+                   href="https://www.kaggle.com/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Explore datasets →
+                </a>
+            </article>
+
+            <article class="resource-card">
+                <div class="resource-number">06 / DATA CONCEPTS</div>
+                <h3>Tableau Learning</h3>
+                <p>
+                    Explore data visualisation concepts, chart selection,
+                    visual storytelling, and dashboard design principles
+                    that can inform analytical work across tools.
+                </p>
+                <a class="resource-link"
+                   href="https://www.tableau.com/learn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Explore visualisation learning →
+                </a>
+            </article>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="section-label">02 / Personal Development</div>
+
+        <h2>A practical learning approach</h2>
+
+        <p class="intro">
+            Learning becomes more meaningful when concepts are applied
+            to real tasks. The following is a suggested structure for
+            organising independent study.
+        </p>
+
+        <div class="plan">
+
+            <div class="plan-item">
+                <strong>Data preparation</strong>
+                <p>
+                    Practise identifying missing values, correcting data
+                    types, checking consistency, and preparing datasets
+                    for analysis.
+                </p>
+            </div>
+
+            <div class="plan-item">
+                <strong>Analysis</strong>
+                <p>
+                    Develop an understanding of descriptive statistics,
+                    quantitative and categorical variables, comparisons,
+                    and evidence-based interpretation.
+                </p>
+            </div>
+
+            <div class="plan-item">
+                <strong>Visualisation</strong>
+                <p>
+                    Build clear charts and dashboards, use appropriate
+                    filters, and present key performance indicators
+                    that respond to relevant selections.
+                </p>
+            </div>
+
+            <div class="plan-item">
+                <strong>Documentation</strong>
+                <p>
+                    Record project objectives, explain decisions,
+                    document findings, and communicate limitations
+                    without overstating results.
+                </p>
+            </div>
+
+            <div class="plan-item">
+                <strong>Portfolio building</strong>
+                <p>
+                    Turn completed exercises into well-documented
+                    projects that demonstrate the process, tools,
+                    reasoning, and verified findings.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="note">
+            <strong>Learning principle:</strong> The goal is not simply
+            to become familiar with analytical tools. It is to understand
+            the data, choose appropriate methods, interpret results
+            responsibly, and communicate insights clearly.
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container footer-inner">
+        <span>© 2026 Thulani Dawin Seleke</span>
+        <span>Business Intelligence · Data Analytics · Continuous Learning</span>
+    </div>
+</footer>
+
+</body>
+</html>

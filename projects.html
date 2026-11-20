@@ -1,0 +1,724 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the data analytics projects and practical learning of Thulani Dawin Seleke.">
+  <title>Projects | Thulani Dawin Seleke</title>
+
+  <style>
+    :root {
+      --paper: #f5f4ef;
+      --ink: #20221f;
+      --green: #40594b;
+      --muted: #74766f;
+      --line: #deded5;
+      --white: #ffffff;
+      --soft-green: #e8ebe4;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 88%);
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .navigation {
+      min-height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 19px;
+      font-weight: bold;
+      letter-spacing: -0.5px;
+      white-space: nowrap;
+    }
+
+    .brand span {
+      color: var(--green);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 23px;
+    }
+
+    nav a {
+      color: var(--muted);
+      font-size: 12px;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover,
+    nav a[aria-current="page"] {
+      color: var(--green);
+    }
+
+    nav a[aria-current="page"] {
+      font-weight: bold;
+    }
+
+    .hero {
+      padding: 92px 0 80px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      color: var(--green);
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: normal;
+      line-height: 1.2;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 20px 0;
+      font-size: clamp(43px, 7vw, 78px);
+      letter-spacing: -3px;
+    }
+
+    .hero-text {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .tag {
+      padding: 6px 12px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .section {
+      padding: 75px 0;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 38px;
+    }
+
+    .section-header h2 {
+      margin-top: 12px;
+      font-size: clamp(29px, 4vw, 42px);
+      letter-spacing: -1px;
+    }
+
+    .section-header p {
+      max-width: 370px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .featured-project {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.35);
+    }
+
+    .project-visual {
+      display: flex;
+      min-height: 390px;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      background: var(--soft-green);
+    }
+
+    .visual-panel {
+      width: 100%;
+      max-width: 360px;
+      padding: 25px;
+      border: 1px solid #d3d9cf;
+      background: rgba(255, 255, 255, 0.75);
+    }
+
+    .visual-panel p {
+      margin-bottom: 20px;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .metric {
+      min-height: 90px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--green);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 24px;
+      font-weight: normal;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .project-content {
+      padding: 42px;
+    }
+
+    .project-number {
+      color: var(--green);
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .project-content h3 {
+      margin: 17px 0;
+      font-size: clamp(28px, 3vw, 38px);
+      letter-spacing: -1px;
+    }
+
+    .project-content > p {
+      margin-bottom: 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .detail-title {
+      margin: 23px 0 8px;
+      color: var(--green);
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+
+    .project-content ul {
+      padding-left: 19px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .project-content li {
+      margin-bottom: 6px;
+    }
+
+    .tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 23px;
+    }
+
+    .tool {
+      padding: 5px 10px;
+      background: var(--soft-green);
+      color: var(--green);
+      font-size: 10px;
+    }
+
+    .learning-section {
+      background: #eaece5;
+    }
+
+    .learning-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 25px;
+    }
+
+    .learning-card {
+      padding: 28px 24px;
+      border-top: 1px solid #bfc8bb;
+    }
+
+    .learning-card .number {
+      color: var(--green);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 28px;
+    }
+
+    .learning-card h3 {
+      margin: 15px 0 10px;
+      font-size: 22px;
+    }
+
+    .learning-card p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 45px;
+    }
+
+    .approach-item h3 {
+      margin-bottom: 12px;
+      font-size: 25px;
+    }
+
+    .approach-item p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .closing {
+      padding: 58px 0;
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .closing-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .closing .eyebrow {
+      color: #d0d9cf;
+    }
+
+    .closing h2 {
+      margin: 12px 0;
+      font-size: clamp(29px, 4vw, 42px);
+    }
+
+    .closing p {
+      color: #e0e6de;
+      font-size: 13px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 20px;
+      border: 1px solid var(--white);
+      color: var(--white);
+      font-size: 12px;
+      white-space: nowrap;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--white);
+      color: var(--green);
+    }
+
+    footer {
+      padding: 25px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    footer p,
+    footer a {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    @media (max-width: 800px) {
+      .navigation {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        padding: 22px 0;
+        gap: 16px;
+      }
+
+      nav {
+        gap: 12px 19px;
+      }
+
+      .featured-project {
+        grid-template-columns: 1fr;
+      }
+
+      .project-visual {
+        min-height: 310px;
+      }
+
+      .learning-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .section-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .closing-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .container {
+        width: 90%;
+      }
+
+      .hero {
+        padding: 60px 0;
+      }
+
+      h1 {
+        letter-spacing: -1.5px;
+      }
+
+      .section {
+        padding: 55px 0;
+      }
+
+      .project-content {
+        padding: 27px 22px;
+      }
+
+      .project-visual {
+        padding: 22px;
+      }
+
+      .approach-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container navigation">
+      <a class="brand" href="index.html">Thulani <span>Seleke.</span></a>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="cv.html">CV</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Selected work · 03</p>
+
+        <h1>Turning information into understanding.</h1>
+
+        <p class="hero-text">
+          A collection of practical exercises and developing projects that
+          reflect my interest in data analytics, business intelligence and
+          the process of making information easier to interpret.
+        </p>
+
+        <div class="hero-meta">
+          <span class="tag">Data Analytics</span>
+          <span class="tag">Business Intelligence</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">Microsoft Excel</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Featured project</p>
+            <h2>Practical data analysis</h2>
+          </div>
+
+          <p>
+            Exploring a real-world style dataset through preparation,
+            visualisation and interactive reporting.
+          </p>
+        </div>
+
+        <article class="featured-project">
+
+          <div class="project-visual" aria-label="Illustration of dashboard KPI cards">
+            <div class="visual-panel">
+              <p>Dashboard measure overview</p>
+
+              <div class="metric-grid">
+                <div class="metric">
+                  <strong>01</strong>
+                  <span>Average fare</span>
+                </div>
+
+                <div class="metric">
+                  <strong>02</strong>
+                  <span>Average tip</span>
+                </div>
+
+                <div class="metric">
+                  <strong>03</strong>
+                  <span>Trip distance</span>
+                </div>
+
+                <div class="metric">
+                  <strong>04</strong>
+                  <span>Revenue & trips</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <span class="project-number">PROJECT 01</span>
+
+            <h3>NYC Taxi Data Analysis</h3>
+
+            <p>
+              A hands-on analytics exercise using a New York City taxi
+              dataset. The work involved preparing data, exploring
+              quantitative and categorical variables, building charts,
+              and developing an interactive dashboard in Power BI.
+            </p>
+
+            <p>
+              The project provided an opportunity to practise moving from
+              raw information towards a structured, visual report.
+            </p>
+
+            <h4 class="detail-title">Work undertaken</h4>
+
+            <ul>
+              <li>Cleaned and prepared dataset fields in Power Query.</li>
+              <li>Explored quantitative and categorical variables.</li>
+              <li>Created visualisations to organise and present data.</li>
+              <li>Worked with interactive slicers and KPI measures.</li>
+              <li>Used Excel alongside Power BI during the analysis workflow.</li>
+            </ul>
+
+            <h4 class="detail-title">Measures explored</h4>
+
+            <ul>
+              <li>Average fare</li>
+              <li>Average tip amount</li>
+              <li>Average trip distance</li>
+              <li>Total revenue</li>
+              <li>Total trips</li>
+            </ul>
+
+            <div class="tools">
+              <span class="tool">Power BI Desktop</span>
+              <span class="tool">Power Query</span>
+              <span class="tool">Microsoft Excel</span>
+              <span class="tool">Data Visualisation</span>
+            </div>
+          </div>
+
+        </article>
+      </div>
+    </section>
+
+    <section class="section learning-section">
+      <div class="container">
+
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Developing capabilities</p>
+            <h2>What I am building</h2>
+          </div>
+
+          <p>
+            Areas of practice that connect my academic studies with
+            the practical application of analytical thinking.
+          </p>
+        </div>
+
+        <div class="learning-grid">
+
+          <article class="learning-card">
+            <span class="number">01</span>
+            <h3>Data preparation</h3>
+            <p>
+              Understanding the importance of cleaning, organising and
+              checking data before using it for analysis.
+            </p>
+          </article>
+
+          <article class="learning-card">
+            <span class="number">02</span>
+            <h3>Visual reporting</h3>
+            <p>
+              Practising how to present information through charts,
+              summary measures and structured dashboard layouts.
+            </p>
+          </article>
+
+          <article class="learning-card">
+            <span class="number">03</span>
+            <h3>Interactive analysis</h3>
+            <p>
+              Exploring how filters, slicers and KPI measures can help
+              people examine information from different perspectives.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Working principles</p>
+            <h2>How I approach a problem</h2>
+          </div>
+        </div>
+
+        <div class="approach-grid">
+
+          <article class="approach-item">
+            <h3>Start with the information</h3>
+            <p>
+              Understand the available data, identify its structure and
+              consider what can reasonably be learned from it before
+              choosing charts or drawing conclusions.
+            </p>
+          </article>
+
+          <article class="approach-item">
+            <h3>Make the result understandable</h3>
+            <p>
+              Present information with clear labels, appropriate
+              visualisations and useful summaries so that the result
+              is easier to interpret.
+            </p>
+          </article>
+
+          <article class="approach-item">
+            <h3>Check the details</h3>
+            <p>
+              Pay attention to data quality, calculations and the
+              relationship between the information presented and
+              the question being explored.
+            </p>
+          </article>
+
+          <article class="approach-item">
+            <h3>Keep learning</h3>
+            <p>
+              Treat each practical exercise as an opportunity to
+              strengthen technical knowledge, improve problem-solving
+              and develop a more disciplined analytical process.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="container closing-inner">
+        <div>
+          <p class="eyebrow">Professional connection</p>
+          <h2>Interested in working together?</h2>
+          <p>
+            I welcome opportunities to learn, contribute and grow
+            through practical experience.
+          </p>
+        </div>
+
+        <a class="button" href="contact.html">Get in touch</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© 2026 Thulani Dawin Seleke. All rights reserved.</p>
+      <a href="index.html">Back to homepage ↑</a>
+    </div>
+  </footer>
+
+</body>
+</html>

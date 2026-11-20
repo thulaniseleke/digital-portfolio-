@@ -4,38 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Curriculum Vitae of Thulani Dawin Seleke.">
-  <title>CV | Thulani Dawin Seleke</title>
+  <meta name="description" content="The professional CV of Thulani Dawin Seleke, a Business Intelligence and Data Analytics student in Botswana.">
+  <title>Curriculum Vitae | Thulani Dawin Seleke</title>
 
   <style>
-    * {
-      box-sizing: border-box;
+    :root {
+      --paper: #f5f4ef;
+      --ink: #20221f;
+      --green: #40594b;
+      --muted: #74766f;
+      --line: #deded5;
+      --white: #ffffff;
     }
 
-    :root {
-      --ink: #171717;
-      --muted: #707070;
-      --line: #e5e5e5;
-      --paper: #ffffff;
-      --surface: #fafafa;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      margin: 0;
       background: var(--paper);
       color: var(--ink);
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.75;
+      font-size: 15px;
+      line-height: 1.8;
     }
 
     a {
       color: inherit;
-      text-underline-offset: 4px;
+      text-decoration: none;
     }
 
-    .topline {
-      height: 3px;
-      background: var(--ink);
+    .container {
+      width: min(1100px, 88%);
+      margin: 0 auto;
     }
 
     header {
@@ -43,187 +50,388 @@
     }
 
     .navigation {
-      max-width: 1050px;
-      margin: auto;
-      padding: 22px 25px;
+      min-height: 86px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 20px;
+      justify-content: space-between;
+      gap: 28px;
     }
 
     .brand {
-      font-size: 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 19px;
       font-weight: bold;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      white-space: nowrap;
     }
 
-    .navigation a {
-      font-size: 14px;
-      text-decoration: none;
+    .brand span {
+      color: var(--green);
     }
 
-    .navigation a:hover {
-      text-decoration: underline;
+    nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 23px;
     }
 
-    .hero {
-      max-width: 1050px;
-      margin: auto;
-      padding: 75px 25px 65px;
+    nav a {
+      color: var(--muted);
+      font-size: 12px;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover,
+    nav a[aria-current="page"] {
+      color: var(--green);
+    }
+
+    nav a[aria-current="page"] {
+      font-weight: bold;
+    }
+
+    .page-intro {
+      padding: 88px 0 55px;
+      border-bottom: 1px solid var(--line);
     }
 
     .eyebrow {
-      font-size: 12px;
+      color: var(--green);
+      font-size: 11px;
       font-weight: bold;
-      letter-spacing: 2px;
-      color: var(--muted);
+      letter-spacing: 2.5px;
       text-transform: uppercase;
     }
 
-    h1 {
-      font-size: clamp(42px, 7vw, 76px);
-      line-height: 1.05;
-      letter-spacing: -3px;
-      margin: 18px 0;
-    }
-
-    .subtitle {
-      font-size: 19px;
-      color: #555;
-      max-width: 700px;
-    }
-
-    .contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 25px;
-      margin-top: 25px;
-      font-size: 14px;
-    }
-
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 0 25px 75px;
-    }
-
-    section {
-      padding: 35px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .section-heading {
-      display: grid;
-      grid-template-columns: 170px 1fr;
-      gap: 25px;
-    }
-
-    .section-number {
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 1.5px;
-      padding-top: 8px;
-    }
-
-    h2 {
-      font-size: 29px;
-      letter-spacing: -1px;
-      margin: 0 0 20px;
-    }
-
+    h1,
+    h2,
     h3 {
-      font-size: 18px;
-      margin: 0 0 4px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: normal;
+      line-height: 1.2;
     }
 
-    p {
-      margin-top: 8px;
+    h1 {
+      max-width: 800px;
+      margin: 18px 0;
+      font-size: clamp(42px, 7vw, 76px);
+      letter-spacing: -2.8px;
     }
 
-    .entry {
-      margin-bottom: 28px;
-    }
-
-    .entry:last-child {
-      margin-bottom: 0;
-    }
-
-    .details {
+    .intro-text {
+      max-width: 650px;
       color: var(--muted);
-      font-size: 14px;
-      margin: 3px 0 10px;
+      font-size: 16px;
     }
 
-    .skills {
+    .cv-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 9px;
-      padding: 0;
-      list-style: none;
+      gap: 12px;
+      margin-top: 28px;
     }
 
-    .skills li {
-      border: 1px solid var(--line);
-      background: var(--surface);
-      padding: 7px 12px;
-      font-size: 14px;
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border: 1px solid var(--green);
+      background: var(--green);
+      color: var(--white);
+      font-size: 12px;
+      transition: background 0.2s ease, color 0.2s ease;
     }
 
-    .reference-note {
-      background: var(--surface);
-      border-left: 2px solid var(--ink);
-      padding: 15px 18px;
-      font-size: 14px;
-      color: #555;
+    .button:hover {
+      background: transparent;
+      color: var(--green);
     }
 
-    footer {
-      background: var(--ink);
-      color: white;
-      text-align: center;
-      padding: 28px 20px;
+    .button-outline {
+      background: transparent;
+      color: var(--green);
+    }
+
+    .button-outline:hover {
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .cv-layout {
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      gap: 75px;
+      padding: 65px 0 90px;
+      align-items: start;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 25px;
+    }
+
+    .sidebar-block {
+      padding: 0 0 25px;
+      margin-bottom: 25px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .sidebar h2 {
+      margin-bottom: 15px;
+      color: var(--green);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+
+    .sidebar p,
+    .sidebar a {
+      overflow-wrap: anywhere;
+      color: var(--muted);
       font-size: 13px;
     }
 
-    footer a {
-      color: white;
+    .sidebar a:hover {
+      color: var(--green);
     }
 
-    @media (max-width: 650px) {
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill {
+      padding: 5px 10px;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      font-size: 11px;
+    }
+
+    .section {
+      margin-bottom: 58px;
+    }
+
+    .section-heading {
+      margin-bottom: 28px;
+      padding-bottom: 17px;
+      border-bottom: 1px solid var(--line);
+      font-size: 29px;
+      letter-spacing: -0.7px;
+    }
+
+    .entry {
+      position: relative;
+      padding: 0 0 30px 22px;
+      margin-left: 5px;
+      border-left: 1px solid #c8cec5;
+    }
+
+    .entry:last-child {
+      padding-bottom: 0;
+      border-left-color: transparent;
+    }
+
+    .entry::before {
+      position: absolute;
+      top: 8px;
+      left: -5px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--green);
+      content: "";
+    }
+
+    .entry h3 {
+      margin-bottom: 7px;
+      font-size: 21px;
+    }
+
+    .entry-meta {
+      margin-bottom: 13px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .entry p,
+    .entry li {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .entry ul {
+      padding-left: 18px;
+      margin-top: 8px;
+    }
+
+    .entry li {
+      padding-left: 3px;
+      margin-bottom: 5px;
+    }
+
+    .profile-text {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .reference-note {
+      padding: 24px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.35);
+    }
+
+    .reference-note p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .closing {
+      padding: 55px 0;
+      background: #eaece5;
+    }
+
+    .closing-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .closing h2 {
+      margin-bottom: 8px;
+      font-size: 30px;
+    }
+
+    .closing p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 25px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    footer p,
+    footer a {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    @media (max-width: 800px) {
       .navigation {
         align-items: flex-start;
         flex-direction: column;
+        justify-content: center;
+        padding: 22px 0;
+        gap: 16px;
       }
 
-      .hero {
-        padding-top: 50px;
+      nav {
+        gap: 12px 19px;
+      }
+
+      .cv-layout {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .sidebar-block {
+        margin-bottom: 0;
+      }
+
+      .closing-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        width: 90%;
+      }
+
+      .page-intro {
+        padding-top: 58px;
+      }
+
+      h1 {
+        letter-spacing: -1.5px;
+      }
+
+      .sidebar {
+        grid-template-columns: 1fr;
       }
 
       .section-heading {
-        grid-template-columns: 1fr;
-        gap: 8px;
+        font-size: 25px;
       }
 
-      .section-number {
-        padding-top: 0;
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
       }
     }
 
     @media print {
+      body {
+        background: white;
+        font-size: 12px;
+      }
+
       header,
+      .cv-actions,
+      .closing,
       footer {
         display: none;
       }
 
-      .hero {
-        padding-top: 20px;
+      .container {
+        width: 100%;
       }
 
-      main {
-        padding-bottom: 0;
+      .page-intro {
+        padding: 15px 0 25px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .cv-layout {
+        grid-template-columns: 210px 1fr;
+        gap: 30px;
+        padding: 25px 0;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .section {
+        margin-bottom: 30px;
+      }
+
+      .entry {
+        break-inside: avoid;
       }
 
       a {
@@ -234,206 +442,265 @@
 </head>
 
 <body>
-  <div class="topline"></div>
 
   <header>
-    <div class="navigation">
-      <div class="brand">Thulani Seleke</div>
-      <a href="index.html">← Back to homepage</a>
+    <div class="container navigation">
+      <a class="brand" href="index.html">Thulani <span>Seleke.</span></a>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="cv.html" aria-current="page">CV</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <div class="hero">
-    <div class="eyebrow">Curriculum Vitae</div>
-
-    <h1>Thulani Dawin<br>Seleke.</h1>
-
-    <p class="subtitle">
-      Business Intelligence and Data Analytics student at
-      Botswana Accountancy College, building analytical,
-      technical and professional skills.
-    </p>
-
-    <div class="contact">
-      <span>Mochudi, Botswana</span>
-      <a href="mailto:selekedawin@gmail.com">
-        selekedawin@gmail.com
-      </a>
-      <a href="tel:+26776910345">+267 76910345</a>
-    </div>
-  </div>
-
   <main>
-    <section>
-      <div class="section-heading">
-        <div class="section-number">01 / PROFILE</div>
+    <section class="page-intro">
+      <div class="container">
+        <p class="eyebrow">Professional profile · 01</p>
+        <h1>Curriculum Vitae</h1>
+        <p class="intro-text">
+          An overview of my education, practical experience, capabilities
+          and developing interests in business intelligence and data analytics.
+        </p>
 
-        <div>
-          <h2>Professional Profile</h2>
-
-          <p>
-            I am a motivated and results-driven student with an interest
-            in mathematics, computing and data analytics. My academic
-            background has helped me develop a foundation in logical
-            reasoning and problem-solving.
-          </p>
-
-          <p>
-            I have experience supporting administrative activities,
-            managing information and communicating with others. I aim
-            to continue developing my skills through academic work,
-            practical projects and professional opportunities.
-          </p>
+        <div class="cv-actions">
+          <button class="button" onclick="window.print()">
+            Print / Save as PDF
+          </button>
+          <a class="button button-outline" href="contact.html">
+            Contact me
+          </a>
         </div>
       </div>
     </section>
 
-    <section>
-      <div class="section-heading">
-        <div class="section-number">02 / EDUCATION</div>
+    <div class="container cv-layout">
 
-        <div>
-          <h2>Education</h2>
+      <aside class="sidebar">
+        <div class="sidebar-block">
+          <h2>Contact</h2>
+          <p>Mochudi, Botswana</p>
+          <p><a href="mailto:selekedawin@gmail.com">selekedawin@gmail.com</a></p>
+          <p><a href="tel:+26776910345">+267 76910345</a></p>
+        </div>
 
-          <div class="entry">
-            <h3>Botswana Accountancy College</h3>
-            <div class="details">
-              Business Intelligence and Data Analytics · Year 1
-            </div>
-            <p>
-              Currently studying Business Intelligence and Data Analytics,
-              with an interest in analytical thinking, computing and
-              data-informed decision-making.
-            </p>
-          </div>
-
-          <div class="entry">
-            <h3>Premix Academy</h3>
-            <div class="details">Form 5 · 40 points</div>
-          </div>
-
-          <div class="entry">
-            <h3>Radikolo Junior Secondary School</h3>
-            <div class="details">
-              Mochudi, Botswana · Junior Certificate · 41 points
-            </div>
+        <div class="sidebar-block">
+          <h2>Core skills</h2>
+          <div class="skill-list">
+            <span class="skill">Analytical thinking</span>
+            <span class="skill">Mathematics</span>
+            <span class="skill">Problem-solving</span>
+            <span class="skill">Communication</span>
+            <span class="skill">Organisation</span>
+            <span class="skill">Teamwork</span>
+            <span class="skill">Time management</span>
+            <span class="skill">Administration</span>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section>
-      <div class="section-heading">
-        <div class="section-number">03 / EXPERIENCE</div>
-
-        <div>
-          <h2>Experience</h2>
-
-          <div class="entry">
-            <h3>Assistant — Flowers by Lelo</h3>
-
-            <ul>
-              <li>Supported the management of the business social media page.</li>
-              <li>Helped receive and organise flower orders.</li>
-              <li>Assisted with arranging and delivering flower orders.</li>
-            </ul>
+        <div class="sidebar-block">
+          <h2>Technical interests</h2>
+          <div class="skill-list">
+            <span class="skill">Data analytics</span>
+            <span class="skill">Power BI</span>
+            <span class="skill">Microsoft Excel</span>
+            <span class="skill">Computing</span>
+            <span class="skill">Data visualisation</span>
           </div>
-
-          <div class="entry">
-            <h3>FIFA Connect Administrator Agent</h3>
-
-            <p class="details">
-              Marhio Fighters (Pty) Ltd and Mochudi United Sporting Club
-            </p>
-
-            <ul>
-              <li>Supported player registrations and transfers.</li>
-              <li>Assisted with player renewals and record updates.</li>
-              <li>Helped administer FIFA Connect records for professional
-                and amateur players.</li>
-            </ul>
-          </div>
-
-          <div class="entry">
-            <h3>Administrator Agent — Temo Letlotlo</h3>
-
-            <ul>
-              <li>Supported the administration of payments for ploughing,
-                harrowing and planting fields.</li>
-              <li>Helped maintain organised administrative processes.</li>
-            </ul>
-          </div>
-
-          <p class="details">
-            Add dates for each role if available.
+          <p style="margin-top: 12px;">
+            Tools listed reflect my learning and practical exposure;
+            proficiency continues to develop.
           </p>
         </div>
-      </div>
-    </section>
 
-    <section>
-      <div class="section-heading">
-        <div class="section-number">04 / SKILLS</div>
-
-        <div>
-          <h2>Skills & Competencies</h2>
-
-          <ul class="skills">
-            <li>Mathematical reasoning</li>
-            <li>Problem-solving</li>
-            <li>Basic computer skills</li>
-            <li>English communication</li>
-            <li>Setswana communication</li>
-            <li>Teamwork</li>
-            <li>Time management</li>
-            <li>Organisation</li>
-            <li>Willingness to learn</li>
-            <li>Attention to detail</li>
-          </ul>
+        <div class="sidebar-block">
+          <h2>Languages</h2>
+          <p>English</p>
+          <p>Setswana</p>
         </div>
-      </div>
-    </section>
 
-    <section>
-      <div class="section-heading">
-        <div class="section-number">05 / INTERESTS</div>
-
-        <div>
+        <div class="sidebar-block">
           <h2>Interests</h2>
+          <p>Mathematics, computing, soccer and learning how data can support better decisions.</p>
+        </div>
+      </aside>
 
-          <p>
-            Mathematics, computing, business intelligence,
-            data analytics and soccer.
+      <div class="cv-content">
+
+        <section class="section">
+          <h2 class="section-heading">Professional Profile</h2>
+          <p class="profile-text">
+            I am a first-year Business Intelligence and Data Analytics student
+            at Botswana Accountancy College, with an academic foundation in
+            mathematics and science and practical experience in administration
+            and coordination. I am interested in understanding data, identifying
+            meaningful patterns and communicating information clearly. My
+            experience has also helped me develop responsibility, organisation,
+            teamwork and communication skills. I am continuing to build my
+            technical knowledge through coursework and practical projects.
           </p>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <section>
-      <div class="section-heading">
-        <div class="section-number">06 / REFERENCES</div>
+        <section class="section">
+          <h2 class="section-heading">Education</h2>
 
-        <div>
-          <h2>References</h2>
+          <article class="entry">
+            <h3>Botswana Accountancy College</h3>
+            <p class="entry-meta">Business Intelligence and Data Analytics · First Year</p>
+            <p>
+              Developing a foundation in data analysis, business intelligence,
+              computing and the use of information to support decision-making.
+            </p>
+          </article>
 
+          <article class="entry">
+            <h3>Premix Academy</h3>
+            <p class="entry-meta">Form 5 · 40 points</p>
+            <p>
+              Built an academic foundation with an emphasis on learning,
+              analytical thinking and problem-solving.
+            </p>
+          </article>
+
+          <article class="entry">
+            <h3>Radikolo Junior Secondary School</h3>
+            <p class="entry-meta">Junior Certificate · 41 points</p>
+            <p>
+              Completed junior secondary education in Mochudi, Botswana.
+            </p>
+          </article>
+        </section>
+
+        <section class="section">
+          <h2 class="section-heading">Experience</h2>
+
+          <article class="entry">
+            <h3>Assistant</h3>
+            <p class="entry-meta">Flowers by Lelo</p>
+            <ul>
+              <li>Assisted with managing the business's social media page.</li>
+              <li>Received and helped organise flower orders.</li>
+              <li>Supported the arrangement and delivery of customer orders.</li>
+              <li>Helped coordinate day-to-day tasks and customer requests.</li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <h3>FIFA Connect Administrator Agent</h3>
+            <p class="entry-meta">Football administration</p>
+            <ul>
+              <li>Assisted with player registrations, transfers and renewals.</li>
+              <li>Updated professional and amateur player records.</li>
+              <li>Managed FIFA Connect administration for Marhio Fighters Pty Ltd and Mochudi United Sporting Club.</li>
+              <li>Handled registration information carefully and supported accurate record-keeping.</li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <h3>Administrator Agent</h3>
+            <p class="entry-meta">Temo Letlotlo</p>
+            <ul>
+              <li>Assisted with payments related to agricultural field services.</li>
+              <li>Worked with payments for ploughing, harrowing and planting.</li>
+              <li>Supported administrative coordination of these activities.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="section">
+          <h2 class="section-heading">Projects & Practical Learning</h2>
+
+          <article class="entry">
+            <h3>NYC Taxi Data Analysis</h3>
+            <p class="entry-meta">Data analytics · Power BI and Excel</p>
+            <p>
+              Worked with a taxi dataset as a practical data analysis exercise,
+              including data cleaning, exploring quantitative and categorical
+              variables, creating visualisations, and developing an interactive
+              dashboard.
+            </p>
+            <ul>
+              <li>Explored measures including average fare, average tip amount and average trip distance.</li>
+              <li>Worked with total revenue and total trips as summary measures.</li>
+              <li>Practised using slicers and KPI displays to make dashboard information more interactive.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="section">
+          <h2 class="section-heading">Skills & Strengths</h2>
+
+          <article class="entry">
+            <h3>Analytical and problem-solving skills</h3>
+            <p>
+              A foundation in mathematics and science, with an interest in
+              logical reasoning, interpreting information and approaching
+              problems systematically.
+            </p>
+          </article>
+
+          <article class="entry">
+            <h3>Communication</h3>
+            <p>
+              Able to communicate in English and Setswana, with an interest
+              in expressing ideas clearly and working constructively with others.
+            </p>
+          </article>
+
+          <article class="entry">
+            <h3>Organisation and teamwork</h3>
+            <p>
+              Practical experience coordinating tasks, managing administrative
+              responsibilities, contributing to group work and organising time.
+            </p>
+          </article>
+
+          <article class="entry">
+            <h3>Computer and data skills</h3>
+            <p>
+              Basic computer skills and practical exposure to Microsoft Excel,
+              Power BI, data preparation and dashboard visualisation.
+              Continuing to develop technical proficiency through study and practice.
+            </p>
+          </article>
+        </section>
+
+        <section class="section">
+          <h2 class="section-heading">References</h2>
           <div class="reference-note">
-            Academic reference letters from Premix Academy are available
-            and can be supplied upon request. Contact details for referees
-            should be included only with their permission.
+            <p>
+              Academic references from Premix Academy are available upon request.
+              Further professional references can be provided where appropriate.
+            </p>
           </div>
+        </section>
+
+      </div>
+    </div>
+
+    <section class="closing">
+      <div class="container closing-inner">
+        <div>
+          <p class="eyebrow">The next conversation</p>
+          <h2>Let's connect professionally.</h2>
+          <p>For opportunities, collaboration or professional enquiries.</p>
         </div>
+        <a class="button" href="contact.html">Get in touch</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <p><strong>Thulani Dawin Seleke</strong></p>
-    <p>Business Intelligence and Data Analytics</p>
-    <p>
-      <a href="mailto:selekedawin@gmail.com">
-        selekedawin@gmail.com
-      </a>
-    </p>
+    <div class="container footer-inner">
+      <p>© 2026 Thulani Dawin Seleke. All rights reserved.</p>
+      <a href="index.html">Back to homepage ↑</a>
+    </div>
   </footer>
+
 </body>
 </html>

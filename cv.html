@@ -1,0 +1,439 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Curriculum Vitae of Thulani Dawin Seleke.">
+  <title>CV | Thulani Dawin Seleke</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --ink: #171717;
+      --muted: #707070;
+      --line: #e5e5e5;
+      --paper: #ffffff;
+      --surface: #fafafa;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+      text-underline-offset: 4px;
+    }
+
+    .topline {
+      height: 3px;
+      background: var(--ink);
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .navigation {
+      max-width: 1050px;
+      margin: auto;
+      padding: 22px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .navigation a {
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .navigation a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      max-width: 1050px;
+      margin: auto;
+      padding: 75px 25px 65px;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.05;
+      letter-spacing: -3px;
+      margin: 18px 0;
+    }
+
+    .subtitle {
+      font-size: 19px;
+      color: #555;
+      max-width: 700px;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 25px;
+      margin-top: 25px;
+      font-size: 14px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 0 25px 75px;
+    }
+
+    section {
+      padding: 35px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 25px;
+    }
+
+    .section-number {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      padding-top: 8px;
+    }
+
+    h2 {
+      font-size: 29px;
+      letter-spacing: -1px;
+      margin: 0 0 20px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin: 0 0 4px;
+    }
+
+    p {
+      margin-top: 8px;
+    }
+
+    .entry {
+      margin-bottom: 28px;
+    }
+
+    .entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .details {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 3px 0 10px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .skills li {
+      border: 1px solid var(--line);
+      background: var(--surface);
+      padding: 7px 12px;
+      font-size: 14px;
+    }
+
+    .reference-note {
+      background: var(--surface);
+      border-left: 2px solid var(--ink);
+      padding: 15px 18px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    footer {
+      background: var(--ink);
+      color: white;
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: white;
+    }
+
+    @media (max-width: 650px) {
+      .navigation {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .hero {
+        padding-top: 50px;
+      }
+
+      .section-heading {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .section-number {
+        padding-top: 0;
+      }
+    }
+
+    @media print {
+      header,
+      footer {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 20px;
+      }
+
+      main {
+        padding-bottom: 0;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topline"></div>
+
+  <header>
+    <div class="navigation">
+      <div class="brand">Thulani Seleke</div>
+      <a href="index.html">← Back to homepage</a>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="eyebrow">Curriculum Vitae</div>
+
+    <h1>Thulani Dawin<br>Seleke.</h1>
+
+    <p class="subtitle">
+      Business Intelligence and Data Analytics student at
+      Botswana Accountancy College, building analytical,
+      technical and professional skills.
+    </p>
+
+    <div class="contact">
+      <span>Mochudi, Botswana</span>
+      <a href="mailto:selekedawin@gmail.com">
+        selekedawin@gmail.com
+      </a>
+      <a href="tel:+26776910345">+267 76910345</a>
+    </div>
+  </div>
+
+  <main>
+    <section>
+      <div class="section-heading">
+        <div class="section-number">01 / PROFILE</div>
+
+        <div>
+          <h2>Professional Profile</h2>
+
+          <p>
+            I am a motivated and results-driven student with an interest
+            in mathematics, computing and data analytics. My academic
+            background has helped me develop a foundation in logical
+            reasoning and problem-solving.
+          </p>
+
+          <p>
+            I have experience supporting administrative activities,
+            managing information and communicating with others. I aim
+            to continue developing my skills through academic work,
+            practical projects and professional opportunities.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-heading">
+        <div class="section-number">02 / EDUCATION</div>
+
+        <div>
+          <h2>Education</h2>
+
+          <div class="entry">
+            <h3>Botswana Accountancy College</h3>
+            <div class="details">
+              Business Intelligence and Data Analytics · Year 1
+            </div>
+            <p>
+              Currently studying Business Intelligence and Data Analytics,
+              with an interest in analytical thinking, computing and
+              data-informed decision-making.
+            </p>
+          </div>
+
+          <div class="entry">
+            <h3>Premix Academy</h3>
+            <div class="details">Form 5 · 40 points</div>
+          </div>
+
+          <div class="entry">
+            <h3>Radikolo Junior Secondary School</h3>
+            <div class="details">
+              Mochudi, Botswana · Junior Certificate · 41 points
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-heading">
+        <div class="section-number">03 / EXPERIENCE</div>
+
+        <div>
+          <h2>Experience</h2>
+
+          <div class="entry">
+            <h3>Assistant — Flowers by Lelo</h3>
+
+            <ul>
+              <li>Supported the management of the business social media page.</li>
+              <li>Helped receive and organise flower orders.</li>
+              <li>Assisted with arranging and delivering flower orders.</li>
+            </ul>
+          </div>
+
+          <div class="entry">
+            <h3>FIFA Connect Administrator Agent</h3>
+
+            <p class="details">
+              Marhio Fighters (Pty) Ltd and Mochudi United Sporting Club
+            </p>
+
+            <ul>
+              <li>Supported player registrations and transfers.</li>
+              <li>Assisted with player renewals and record updates.</li>
+              <li>Helped administer FIFA Connect records for professional
+                and amateur players.</li>
+            </ul>
+          </div>
+
+          <div class="entry">
+            <h3>Administrator Agent — Temo Letlotlo</h3>
+
+            <ul>
+              <li>Supported the administration of payments for ploughing,
+                harrowing and planting fields.</li>
+              <li>Helped maintain organised administrative processes.</li>
+            </ul>
+          </div>
+
+          <p class="details">
+            Add dates for each role if available.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-heading">
+        <div class="section-number">04 / SKILLS</div>
+
+        <div>
+          <h2>Skills & Competencies</h2>
+
+          <ul class="skills">
+            <li>Mathematical reasoning</li>
+            <li>Problem-solving</li>
+            <li>Basic computer skills</li>
+            <li>English communication</li>
+            <li>Setswana communication</li>
+            <li>Teamwork</li>
+            <li>Time management</li>
+            <li>Organisation</li>
+            <li>Willingness to learn</li>
+            <li>Attention to detail</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-heading">
+        <div class="section-number">05 / INTERESTS</div>
+
+        <div>
+          <h2>Interests</h2>
+
+          <p>
+            Mathematics, computing, business intelligence,
+            data analytics and soccer.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-heading">
+        <div class="section-number">06 / REFERENCES</div>
+
+        <div>
+          <h2>References</h2>
+
+          <div class="reference-note">
+            Academic reference letters from Premix Academy are available
+            and can be supplied upon request. Contact details for referees
+            should be included only with their permission.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Thulani Dawin Seleke</strong></p>
+    <p>Business Intelligence and Data Analytics</p>
+    <p>
+      <a href="mailto:selekedawin@gmail.com">
+        selekedawin@gmail.com
+      </a>
+    </p>
+  </footer>
+</body>
+</html>
